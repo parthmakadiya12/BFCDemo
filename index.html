@@ -1,0 +1,36 @@
+<script>
+var btn = document.querySelector('button'),
+    p = document.querySelector('p');
+btn.addEventListener('click', function () {
+  p.classList.toggle('bfc');
+}, false);
+</script>
+<style>
+.container {
+  width: 500px;
+  min-height: 280px;
+  border: 1px solid #aaa;
+  padding: 10px;
+  /* creates block formatting context */
+}
+p {
+  overflow: hidden;
+}
+.floated {
+  float: left;
+  margin: 5px;
+}
+
+
+/* general styling */
+
+
+</style>
+<div class="container">
+  <div class="floated">
+    <img src="http://lorempixel.com/200/200/" alt="man jumping">
+  </div>
+  <p class="oh bfc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+</div>
+
+<button>Toggle to CHange Format</button>
